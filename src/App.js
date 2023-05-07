@@ -6,17 +6,13 @@ import MyComponent from './components/MyComponent';
 import React from 'react';
 
 class App extends React.Component {
-  state = {
-    name: 'Cuong',
-    age: 22,
-    adress: ' Ha Dong'
-  }
+ 
   render() {
     return (
       <div>
         Hello
         <MyComponent></MyComponent>
-        My name is {this.state.name}  and My age {this.state.age}
+       
       </div>
     );
   }
