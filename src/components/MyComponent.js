@@ -1,5 +1,5 @@
 import React from "react";
-import AddUserinfor from "./AdddUserinfor";
+import AddUserinfor from "./AddUserinfor";
 import DisplayInfor from "./DisplayInfor";
 class MyComponent extends React.Component {
     state = {
