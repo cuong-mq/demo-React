@@ -9,13 +9,13 @@ class DisplayInfor extends React.Component {
         })
     }
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         const { listUsers } = this.props
         return (
             <div>
                 <div>
                     <span onClick={() => { this.handleShowHide() }}> {
-                        this.state.isShowListUsers == true ? "hide usser " : " showListUsers"
+                        this.state.isShowListUsers === true ? "hide usser " : " showListUsers"
                     } </span>
                 </div>
                 {this.state.isShowListUsers &&

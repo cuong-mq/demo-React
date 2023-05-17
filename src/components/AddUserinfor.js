@@ -31,8 +31,11 @@ class AddUserinfor extends React.Component {
 
     handleOnSumbit = (event) => {
         event.preventDefault()
-        console.log(this.state);
-        this.props.handleAddNewUser();
+        // console.log(this.state);
+        this.props.handleAddNewUser({
+            name: this.state.name,
+            age: this.state.age
+        });
     }
     render() {
         return (
@@ -42,13 +45,13 @@ class AddUserinfor extends React.Component {
                 <form onSubmit={(event) => { this.handleOnSumbit(event) }}>
                     <label>My name </label>
                     <input
-                        value={this.state.name}
+                        // value={this.state.name}
                         type="text"
                         onChange={(event) => { this.handleOnChangeInput(event) }}
                     />
                     <label>My age </label>
                     <input
-                        value={this.state.age}
+                        // value={this.state.age}
                         type="text"
                         onChange={(event) => { this.handleOnChangeAge(event) }}
                     />

@@ -9,8 +9,12 @@ class MyComponent extends React.Component {
             { id: 3, name: "HVD", age: "60 " },
         ]
     }
+
     handleAddNewUser = (userObj) => {
         console.log(userObj);
+        this.setState({
+            listUsers: [userObj, ...this.state.listUsers]
+        })
     }
     render() {
 
