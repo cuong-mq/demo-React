@@ -1,22 +1,28 @@
 import React from "react";
-import Userinfor from "./Userinfor";
-import DisplayInfore from "./DisplayInfor";
+import AddUserinfor from "./AdddUserinfor";
+import DisplayInfor from "./DisplayInfor";
 class MyComponent extends React.Component {
-    state ={
-        listUsers :[
-            {id:1, name: "John", age:" 30"},
-            {id:2, name: "DVD", age:" 10"},
-            {id:3, name: "HVD", age:"60 "},
+    state = {
+        listUsers: [
+            { id: 1, name: "John", age: " 30" },
+            { id: 2, name: "DVD", age: " 10" },
+            { id: 3, name: "HVD", age: "60 " },
         ]
     }
+    handleAddNewUser = (userObj) => {
+        console.log(userObj);
+    }
     render() {
-        
+
         return (
-            
-            <div> 
-                <Userinfor></Userinfor>
-                <hr/>
-                <DisplayInfore listUsers= {this.state.listUsers} />
+
+            <div>
+                <AddUserinfor handleAddNewUser={this.handleAddNewUser} />
+                <hr />
+                <DisplayInfor
+                    listUsers={this.state.listUsers}
+
+                />
             </div>
         )
     }

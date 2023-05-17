@@ -1,5 +1,5 @@
 import React from "react";
-class Userinfor extends React.Component {
+class AddUserinfor extends React.Component {
     state = {
         name: 'Cuong',
         age: 22,
@@ -32,30 +32,30 @@ class Userinfor extends React.Component {
     handleOnSumbit = (event) => {
         event.preventDefault()
         console.log(this.state);
+        this.props.handleAddNewUser();
     }
     render() {
         return (
             <div>
                 My name is {this.state.name}  and My age {this.state.age}
 
-<form onSubmit={(event) => { this.handleOnSumbit(event) }}>
-    <label>My name </label>
-    <input
-        value={this.state.name}
-
-        type="text"
-        onChange={(event) => { this.handleOnChangeInput(event) }}
-    />
-    <label>My age </label>
-    <input
-        value={this.state.age}
-        type="text"
-        onChange={(event) => { this.handleOnChangeAge(event) }}
-    />
-    <button>sumbit</button>
-</form>
+                <form onSubmit={(event) => { this.handleOnSumbit(event) }}>
+                    <label>My name </label>
+                    <input
+                        value={this.state.name}
+                        type="text"
+                        onChange={(event) => { this.handleOnChangeInput(event) }}
+                    />
+                    <label>My age </label>
+                    <input
+                        value={this.state.age}
+                        type="text"
+                        onChange={(event) => { this.handleOnChangeAge(event) }}
+                    />
+                    <button>sumbit</button>
+                </form>
             </div>
         )
     }
 }
-export default Userinfor;
+export default AddUserinfor;
